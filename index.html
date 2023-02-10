@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valentines</title>
+</head>
+<body >
+    
+    <div>
+        <h1>will you be my valentines?</h1>
+        <button  style="height:50px;width:100px" id="yesbutton">Yes</button>
+        <button style="height:50px;width:100px"  id="no">No</button>
+    </div>
+
+    <style>
+
+        body {  
+            background-image: url(/istockphoto-1201265284-612x612.jpg);
+        }
+
+        div{
+            text-align: center;
+            vertical-align: middle;
+        }
+        #no{
+            position :absolute
+        }
+    </style>
+
+<script>
+    document.getElementById('yesbutton').addEventListener('click', function() {
+      alert('thank you see you soon mwaa<3');
+    });
+  
+    var b = document.getElementById("no");
+  
+  function moveButton() {
+    var x = Math.floor(Math.random() * window.innerWidth);
+    var y = Math.floor(Math.random() * window.innerHeight);
+    
+    b.style.left = x + "px";
+    b.style.top = y + "px";
+    b.style.position = "absolute";
+  }
+  
+  b.addEventListener("click", moveButton);
+  </script>
+  
+</body>
+</html>
